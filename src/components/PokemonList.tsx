@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { type Pokemon } from '../features/properties/model/types';
+import './PokemonList.css';
 
 export default function PokemonList({
 	pokemonList,
@@ -15,12 +16,14 @@ export default function PokemonList({
 	};
 
 	return (
-		<div>
+
+		<div className="pokemon-list-container">
 			{pokemonList.map((pokemon, index) => (
-				<div key={index} onClick={() => handleCardClick(pokemon.name)}>
+				<div className="pokemon-list" key={index} onClick={() => handleCardClick(pokemon.name)}>
 					<h2>{pokemon.name}</h2>
 				</div>
 			))}
 		</div>
+		
 	);
 }
