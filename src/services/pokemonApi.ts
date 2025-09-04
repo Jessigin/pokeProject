@@ -1,7 +1,8 @@
+import { type Pokemon } from '../features/properties/model/types';
 import { apiClient } from '../shared/api/client';
 
 export class PokemonApi {
-	static async getPokemonList(): Promise<unknown[]> {
+	static async getPokemonList(): Promise<Pokemon[]> {
 		try {
 			const response = await apiClient.get('/pokemon?limit=151&offset=0');
 
@@ -12,7 +13,7 @@ export class PokemonApi {
 		}
 	}
 
-	static async searchPokemon(name: string): Promise<unknown[]> {
+	static async searchPokemon(name: string): Promise<Pokemon> {
 		try {
 			const response = await apiClient.get(`/pokemon/${name}`);
 			return response.data;
