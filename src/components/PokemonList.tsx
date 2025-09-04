@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { type Pokemon } from '../features/properties/model/types';
 
 export default function PokemonList({
@@ -5,11 +6,18 @@ export default function PokemonList({
 }: {
 	pokemonList: Pokemon[];
 }) {
+	console.log(pokemonList);
+
+	const navigate = useNavigate();
+
+	const handleCardClick = (name: string) => {
+		navigate(`/pokemon/${name}`);
+	};
+
 	return (
 		<div>
-			<div>PokemonList</div>
 			{pokemonList.map((pokemon, index) => (
-				<div key={index}>
+				<div key={index} onClick={() => handleCardClick(pokemon.name)}>
 					<h2>{pokemon.name}</h2>
 				</div>
 			))}
