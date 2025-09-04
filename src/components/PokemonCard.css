@@ -1,55 +1,55 @@
 .pokemon-card {
-  max-width: 320px;
-  margin: 24px 0px 0 0; /* Top and right margin */
-  padding: 20px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  position: absolute;
-  top: 0;
+	/* max-width: 320px; */
+	margin: 24px 0px 0 0; /* Top and right margin */
+	padding: 20px;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+	text-align: center;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	/* position: absolute; */
+	top: 0;
 }
 
 .pokemon-card-title {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  color: #2d72fc;
-  letter-spacing: 1px;
+	font-size: 1.6rem;
+	margin-bottom: 12px;
+	color: #2d72fc;
+	letter-spacing: 1px;
 }
 
 .pokemon-card-image {
-  width: 500px;
-  height: 500px;
-  object-fit: contain;
-  margin-bottom: 16px;
-  background: #f6f8fa;
-  border-radius: 8px;
-  border: 1px solid #eaeaea;
+	width: 500px;
+	height: 500px;
+	object-fit: contain;
+	margin-bottom: 16px;
+	background: #f6f8fa;
+	border-radius: 8px;
+	border: 1px solid #eaeaea;
 }
 
 .pokemon-card-content p {
-  margin: 8px 0;
-  color: #444;
-  background: linear-gradient(90deg, #a259ff 0%, #6a82fb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill: transparent;
+	margin: 8px 0;
+	color: #444;
+	background: linear-gradient(90deg, #a259ff 0%, #6a82fb 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill: transparent;
 }
 
 .pokemon-card-link {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 8px 20px;
-  background: #2d72fc;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s;
+	display: inline-block;
+	margin-top: 16px;
+	padding: 8px 20px;
+	background: #2d72fc;
+	color: #fff;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: background 0.2s;
 }
 
 .pokemon-card-link:hover {
-  background: #174ea6;
+	background: #174ea6;
 }

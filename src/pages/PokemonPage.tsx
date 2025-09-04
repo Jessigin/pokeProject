@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
 import PokemonCard from '../components/PokemonCard';
 import type { Pokemon } from '../features/properties/model/types';
 import { PokemonApi } from '../services/pokemonApi';
@@ -23,7 +24,7 @@ export default function PokemonPage() {
 
 	return (
 		<div>
-			{pokemon ? <PokemonCard pokemon={pokemon} /> : <p>Loading...</p>}
+			{pokemon ? <PokemonCard pokemon={pokemon} /> : <LoadingSpinner />}
 		</div>
 	);
 }
