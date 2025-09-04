@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import LoadingSpinner from '../components/LoadingSpinner';
 import PokemonList from '../components/PokemonList';
 import type { Pokemon } from '../features/properties/model/types';
 import { PokemonApi } from '../services/pokemonApi';
@@ -19,9 +20,15 @@ export default function PokemonListPage() {
 
 	return (
 		<div>
-			<h1>Pokemon List</h1>
+			{pokemonList.length === 0 ? (
+				<LoadingSpinner />
+			) : (
+				<>
+					<h1>Pokemon List</h1>
 
-			<PokemonList pokemonList={pokemonList} />
+					<PokemonList pokemonList={pokemonList} />
+				</>
+			)}
 		</div>
 	);
 }
